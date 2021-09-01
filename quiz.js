@@ -1,10 +1,3 @@
-// const submitAnswerButton = document.querySelector("#submit-answer-button");
-// submitAnswerButton.addEventListener("click", showMsg);
-
-// showMsg(mg) {
-//     console.log("clicked")
-// }
-
 const quizForm = document.querySelector(".quiz-form");
 const submitAnswerBtn = document.querySelector("#submit-answer-btn");
 const outputEl = document.querySelector("#output");

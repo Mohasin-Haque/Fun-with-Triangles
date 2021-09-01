@@ -5,7 +5,6 @@ const outputEl = document.querySelector("#output");
 function calculateAreaOfTriangle(base,height){
     const areaOfTriangle = 1/2 *base *height;
     return areaOfTriangle;
-    // outputEl.innerText = "The area of Triangle is " + areaOfTriangle;
 }
 
 function calculateArea(){
