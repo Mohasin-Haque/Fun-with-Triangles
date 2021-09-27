@@ -3,8 +3,13 @@ const isTriangleBtn = document.querySelector("#is-triangle-btn");
 const outputEl = document.querySelector("#output");
 
 function calculateSumOfAngles(angle1, angle2, angle3) {
+    if(angle1<=0 || angle2<=0 || angle3<=0){
+        outputEl.innerText = "Enter the positive number."
+        return sumOfAngles;
+    }else{
     const sumOfAngles = Number(angle1) + Number(angle2) + Number(angle3);
     return sumOfAngles;
+    }
 }
 
 
