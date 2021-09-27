@@ -3,7 +3,11 @@ const areaBtn = document.querySelector("#area-btn");
 const outputEl = document.querySelector("#output");
 
 function calculateAreaOfTriangle(base,height){
-  if(base<=0 || height<=0){
+  if(!base || !height){
+    outputEl.innerText = "Enter all the fields";
+   return areaOfTriangle;
+  }
+  else if(base<=0 || height<=0){
    outputEl.innerText = "Enter the positive numbers";
    return areaOfTriangle;
   }else{

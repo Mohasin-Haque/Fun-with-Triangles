@@ -3,20 +3,29 @@ const hypotenuseBtn = document.querySelector("#hypotenuse-btn");
 const outputEl = document.querySelector("#output");
 
 function calculateSumOfSquares(a,b){
-  if(a<=0 || b<=0){
-    outputEl.innerText="sides cannot be negative bro.";
-    return sumOfSquares;
-  }else{
-    const sumOfSquares = a*a + b*b;
-    return sumOfSquares;
-  }
+  var sumOFSquares = a*a +b*b;
+  return sumOFSquares;
+}
+
+function calculateLength(){
+  const sumOFSquares= calculateSumOfSquares(Number(sides[0].value),Number(sides[1].value));
+  const lengthOfHypo = Math.sqrt(sumOFSquares);
+  outputEl.innerText = "The length is" + lengthOfHypo;
+
 }
 
 function calculateHypotenuse(){
-  const sumOfSquares = calculateSumOfSquares(Number(sides[0].value), Number(sides[1].value));
-  const lengthOfHypotenuse = Math.sqrt(sumOfSquares);
-  outputEl.innerText = "The length of hypotenuse is " + lengthOfHypotenuse
-
+  var sideA = sides[0].value;
+  var sideB = sides[1].value;
+  if(!sideA || !sideB){
+    outputEl.innerText = "Input all the sides";
+  }
+  else if(sideA < 1 || sideB < 1){
+    outputEl.innerText = "side can not be negative or zero";
+  }
+  else{
+    calculateLength(sides.value);
+  }
 }
 
 hypotenuseBtn.addEventListener("click", calculateHypotenuse);
