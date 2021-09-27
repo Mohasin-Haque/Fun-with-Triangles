@@ -3,8 +3,13 @@ const hypotenuseBtn = document.querySelector("#hypotenuse-btn");
 const outputEl = document.querySelector("#output");
 
 function calculateSumOfSquares(a,b){
+  if(a<=0 || b<=0){
+    outputEl.innerText="sides cannot be negative bro.";
+    return sumOfSquares;
+  }else{
     const sumOfSquares = a*a + b*b;
     return sumOfSquares;
+  }
 }
 
 function calculateHypotenuse(){
